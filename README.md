@@ -35,7 +35,9 @@ tar -zxvf ../parser.tar.gz
 Since the data from the 2 first files is already in the libpostal data directory, only the last file really needs to be downloaded and extracted.
 
 Here are some of the improvements this model offers:
+- Latest data from all sources
 - Improved parses for US rural routes
 - Improves parses for US addresses without state
+- Improvements for addresses with unit numbers but no "#,apt,unit" etc in front of it
 - General parsing improvement for Singapore addresses
 - General parsing improvement for British addresses
