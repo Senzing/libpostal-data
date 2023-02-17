@@ -34,6 +34,7 @@ tar -zxvf ../parser.tar.gz
 ```
 Since the data from the 2 first files is already in the libpostal data directory, only the last file really needs to be downloaded and extracted.
 
+### What this version addresses
 Here are some of the improvements this model offers:
 - Latest data from all sources
 - Improved parses for US rural routes
@@ -41,3 +42,10 @@ Here are some of the improvements this model offers:
 - Improvements for addresses with unit numbers but no "#,apt,unit" etc in front of it
 - General parsing improvement for Singapore addresses
 - General parsing improvement for British addresses
+
+### Quality
+We have a data set of 12950 addresses from 89 countries that we use to test and verify the quality of our models. The data set was generated using random addresses from OSM, minimally 50 per country. Hard-to-parse addresses were gotten from Senzing support team and customers and from the libpostal github page and added to this set.  We ran this data through and compared the results to the default libpostal model.
+You can find statistical comparison of the tests [here](./files/stats/v1/Parsing_comparison.md).
+
+A spreadsheet with more details about the results can be downloaded here: [Parsing_comparison.xls](https://github.com//Senzing/libpostal-data/files/10751572/Parsing_comparison.xls).
+
