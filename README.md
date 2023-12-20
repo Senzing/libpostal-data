@@ -8,6 +8,41 @@ Senzing has been working on updates of the libpostal data model for some time. T
 We have included regular updates to the model in our [Senzing API](https://senzing.com/senzing-api/) product.
 We are now making our data models available to broader audience.
 
+## Version 1.1.0
+This version is composed of 3 files
+- language_classifier.tar.gz - This is the same file default libpostal data model has.
+- libpostal_data.tar.gz - This file is also the same as used by default libpostal datamodel.
+- parser.tar.gz - This is the new updated parser model.
+
+To download click on the links below and the browser with download them for you:
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/language_classifier.tar.gz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/libpostal_data.tar.gz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/parser.tar.gz
+
+or you can use curl
+```
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/language_classifier.tar.gz -o language_classifier.tar.gz
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/libpostal_data.tar.gz -o libpostal_data.tar.gz
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/parser.tar.gz -o parser.tar.gz
+```
+
+To install extract the file in the libpostal data directory:
+```
+tar -zxvf ../language_classifier.tar.gz
+tar -zxvf ../libpostal_data.tar.gz
+tar -zxvf ../parser.tar.gz
+```
+
+### Changes and improvements from version 1.0.0
+- Latest data from all sources
+- Improved parses for Japanese addresses
+- Improved handling of Mexican state codes
+
+### Quality
+We have made some modification to our test data set to improve variations of address and test for improvements we made in this version.  It now has 12951 addresses from 89 countries.
+The over all parsing accuracy improved by 1.09%.  We had improved statistics for 33 countries and had regression with 10.
+You can find statistical comparison of the tests [here](./files/stats/v1.1.0/Parsing_comparison_v1_0_0.md).
+
 ## Version 1.0.0
 This version is composed of 3 files 
 - language_classifier.tar.gz - This is the same file default libpostal data model has.
