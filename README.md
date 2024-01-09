@@ -42,11 +42,12 @@ tar -zxvf ../parser.tar.gz
 We have made some modification to our test data set to improve variations of address and test for improvements we made in this version.  It now has 12951 addresses from 89 countries.
 The over all parsing accuracy improved by 1.09%.  We had improved statistics for 33 countries and had regression with 10.
 You can find statistical comparison of the tests [here](./files/stats/v1.1.0/Parsing_comparison_v1_0_0.md).
+The bulk of the test data we used is located [here](./files/tests/v1.1.0/test_data.csv). We removed about 100 records from the test set, because we don't have permissions to publish them.
 
 ## Version 1.0.0
 This version is composed of 3 files 
 - language_classifier.tar.gz - This is the same file default libpostal data model has.
-- libpostal_data.tar.gz - This file is also the same as used by default libpostal datamodel.
+- libpostal_data.tar.gz - The address dictionary was updated.
 - parser.tar.gz - This is the new updated parser model.
 
 To download click on the links below and the browser with download them for you:
