@@ -44,6 +44,22 @@ The over all parsing accuracy improved by 1.09%.  We had improved statistics for
 You can find statistical comparison of the tests [here](./files/stats/v1.1.0/Parsing_comparison_v1_0_0.md).
 The bulk of the test data we used is located [here](./files/tests/v1.1.0/test_data.csv). We removed about 100 records from the test set, because we don't have permissions to publish them.
 
+### Training data
+The data we used for creating the data model is availabe for download.  There are total over 1.7 billion lines in 8 files.  To download click the links below:
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/formatted_addresses_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/formatted_places_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/formatted_ways_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/geoplanet_formatted_addresses_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/intersections_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/openaddress_uk_formatted_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/openaddresses_formatted_addresses_tagged_random.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/training_data/senzing_formatted_random.tsv.tgz
+
+Once downloaded, extract them with
+```
+tar -zxvf <file name>
+```
+
 ## Version 1.0.0
 This version is composed of 3 files 
 - language_classifier.tar.gz - This is the same file default libpostal data model has.
