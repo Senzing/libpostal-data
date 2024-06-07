@@ -1,10 +1,13 @@
-name: add to project community
+name: add to project gdev
 
 on:
   issues:
     types:
       - opened
       - reopened
+
+permissions:
+  repository-projects: write
 
 jobs:
   add-to-project:
