@@ -11,6 +11,6 @@ jobs:
   add-to-project-dependabot:
     secrets:
       SENZING_GITHUB_PROJECT_RW_TOKEN: ${{ secrets.SENZING_GITHUB_PROJECT_RW_TOKEN }}
-    uses: senzing-factory/build-resources/.github/workflows/add-to-project-dependabot.yaml@v1
+    uses: senzing-factory/build-resources/.github/workflows/add-to-project-dependabot.yaml@v2
     with:
       project: ${{ vars.SENZING_PROJECT_GDEV }}
