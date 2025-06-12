@@ -1,4 +1,4 @@
-|Country|% improvement|Total records|Failures - default libpostal|Percent failed - default libposta|Failures - Senzing|Percent_failed - Senzing|
+|Country|% improvement|Total records|Failures - default libpostal|Percent failed - default libpostal|Failures - Senzing|Percent_failed - Senzing|
 |---|---|---|---|---|---|---|
 |ae|74|50|47|94|10|20|
 |am|12|50|9|18|3|6|
