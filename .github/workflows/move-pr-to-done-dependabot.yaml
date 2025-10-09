@@ -5,11 +5,12 @@ on:
     branches: [main]
     types: [closed]
 
-permissions:
-  repository-projects: write
+permissions: {}
 
 jobs:
   move-pr-to-done-dependabot:
+    permissions:
+      repository-projects: write
     secrets:
       SENZING_GITHUB_PROJECT_RW_TOKEN: ${{ secrets.SENZING_GITHUB_PROJECT_RW_TOKEN }}
     uses: senzing-factory/build-resources/.github/workflows/move-pr-to-done-dependabot.yaml@v3

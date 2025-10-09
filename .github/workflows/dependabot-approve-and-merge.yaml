@@ -4,12 +4,13 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   dependabot-approve-and-merge:
+    permissions:
+      contents: write
+      pull-requests: write
     secrets:
       SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN: ${{ secrets.SENZING_GITHUB_CODEOWNER_PR_RW_TOKEN }}
     uses: senzing-factory/build-resources/.github/workflows/dependabot-approve-and-merge.yaml@v3
