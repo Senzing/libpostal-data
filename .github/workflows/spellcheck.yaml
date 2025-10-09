@@ -4,15 +4,18 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   spellcheck:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - uses: streetsidesoftware/cspell-action@v7
         with:

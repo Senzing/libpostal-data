@@ -4,14 +4,15 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  repository-projects: write
+permissions: {}
 
 jobs:
   add-to-project-dependabot:
+    permissions:
+      repository-projects: write
     secrets:
       SENZING_GITHUB_PROJECT_RW_TOKEN: ${{ secrets.SENZING_GITHUB_PROJECT_RW_TOKEN }}
-    uses: senzing-factory/build-resources/.github/workflows/add-to-project-dependabot.yaml@v2
+    uses: senzing-factory/build-resources/.github/workflows/add-to-project-dependabot.yaml@v3
     with:
       project: ${{ vars.SENZING_GITHUB_ORGANIZATION_PROJECT }}
 
@@ -20,6 +21,6 @@ jobs:
     if: ${{ always() && contains(fromJSON('["failure", "cancelled"]'), needs.add-to-project-dependabot.outputs.job-status) }}
     secrets:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-    uses: senzing-factory/build-resources/.github/workflows/build-failure-slack-notification.yaml@v2
+    uses: senzing-factory/build-resources/.github/workflows/build-failure-slack-notification.yaml@v3
     with:
       job-status: ${{ needs.add-to-project-dependabot.outputs.job-status }}
