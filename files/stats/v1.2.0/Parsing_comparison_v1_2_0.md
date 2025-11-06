@@ -1,5 +1,5 @@
 |country|% improvement|Total records|Failures - v1.1.0|Percent_failed - v1.1.0|Failures - v1.2.0|Percent_failed - v1.2.0|
-|—-|—-|—-|—-|—-|—-|—-|
+|---|---|---|---|---|---|---|
 |ae|-6.00|50|10|20|13|26|
 |am|0.00|50|2|4|2|4|
 |ar|1.33|75|12|16|11|14.67|

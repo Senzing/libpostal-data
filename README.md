@@ -50,8 +50,8 @@ tar -zxvf ../parser.tar.gz
 
 We have overhauled our test data, both to correct errors and increase variation. It now has 12982 addresses from 88 countries.
 The over all parsing accuracy improved by 0.68%.
-You can find [v1.1 vs v1.2 statistical comparison of the tests here].
-The bulk of the [1.2 test data is located here]. We removed just over 100 records from the test set, because we don't have permissions to publish them.
+You can find [statistical comparison between v1.1 and 1.2 here](./files/stats/v1.2.0/Parsing_comparison_v1_2_0.md).
+The bulk of the [1.2 test data is located here](./files/tests/v1.2.0/test_data.csv). We removed just over 100 records from the test set, because we don't have permissions to publish them.
 
 A spreadsheet with more details about the results can be downloaded here: [Parsing_comparison_1.1_vs_1.2.xlsx].
 
