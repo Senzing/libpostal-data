@@ -35,9 +35,9 @@ curl https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/parser.tar.gz -o
 To install extract the file in the libpostal data directory:
 
 ```
-tar -zxvf ../language_classifier.tar.gz
-tar -zxvf ../libpostal_data.tar.gz
-tar -zxvf ../parser.tar.gz
+tar -zxvf language_classifier.tar.gz
+tar -zxvf libpostal_data.tar.gz
+tar -zxvf parser.tar.gz
 ```
 
 ### Changes and improvements from version 1.1.0
@@ -53,7 +53,7 @@ The over all parsing accuracy improved by 0.68%.
 You can find [statistical comparison between v1.1 and 1.2 here](./files/stats/v1.2.0/Parsing_comparison_v1_2_0.md).
 The bulk of the [1.2 test data is located here](./files/tests/v1.2.0/test_data.csv). We removed just over 100 records from the test set, because we don't have permissions to publish them.
 
-A spreadsheet with more details about the results can be downloaded here: [Parsing_comparison_1.1_vs_1.2.xlsx].
+A spreadsheet with more details about the results can be downloaded here: [Parsing_comparison_1.1_vs_1.2.xlsx](https://github.com/Senzing/libpostal-data/blob/main/files/stats/v1.2.0/Parsing_comparison_1.1_vs_1.2.xlsx).
 
 ### Training data
 
@@ -189,10 +189,7 @@ A spreadsheet with more details about the results can be downloaded here: [Parsi
 [Open Street Map]: https://www.openstreetmap.org/
 [OpenAddresses]: https://openaddresses.io
 [Parsing_comparison.xls]: https://github.com/Senzing/libpostal-data/blob/main/files/stats/v1/Parsing_comparison.xls
-[Parsing_comparison_1.1_vs_1.2.xlsx]: https://github.com/Senzing/libpostal-data/blob/main/files/stats/v1.2.0/Parsing_comparison_1.1_vs_1.2.xlsx
 [Senzing API]: https://senzing.com/senzing-api/
 [Senzing]: https://senzing.com/
 [statistical comparison of the tests here]: ./files/stats/v1.1.0/Parsing_comparison_v1_1_0.md
-[v1.1 vs v1.2 statistical comparison of the tests here] ./files/stats/v1.2.0/Parsing_comparison_v1_2_0.md
-[1.2 test data is located here]: ./files/tests/v1.2.0/test_data.csv
 [test data we used is located here]: ./files/tests/v1.1.0/test_data.csv
