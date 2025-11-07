@@ -10,6 +10,68 @@ Senzing has been working on updates of the libpostal data model for some time. T
 We have included regular updates to the model in our [Senzing API] product.
 We are now making our data models available to broader audience.
 
+## Version 1.2.0
+
+This version is composed of 3 files
+
+- language_classifier.tar.gz - This is the same file used in version 1.1.0.
+- libpostal_data.tar.gz - This file is also the same as used by version 1.1.0.
+- parser.tar.gz - This is the new updated parser model.
+
+To download click on the links below and the browser will download them for you:
+
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/language_classifier.tar.gz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/libpostal_data.tar.gz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/parser.tar.gz
+
+or you can use curl
+
+```
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/language_classifier.tar.gz -o language_classifier.tar.gz
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/libpostal_data.tar.gz -o libpostal_data.tar.gz
+curl https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/parser.tar.gz -o parser.tar.gz
+```
+
+To install extract the file in the libpostal data directory:
+
+```
+tar -zxvf language_classifier.tar.gz
+tar -zxvf libpostal_data.tar.gz
+tar -zxvf parser.tar.gz
+```
+
+### Changes and improvements from version 1.1.0
+
+- Latest data from all sources
+- Improved parses for Chinese, Taiwanese and Korean addresses
+- Correction of labeling of tokens, which were truncated in certain cases
+
+### Quality
+
+We have overhauled our test data, both to correct errors and increase variation. It now has 12982 addresses from 88 countries.
+The over all parsing accuracy improved by 0.68%.
+You can find [statistical comparison between v1.1 and 1.2 here](./files/stats/v1.2.0/Parsing_comparison_v1_2_0.md).
+The bulk of the [1.2 test data is located here](./files/tests/v1.2.0/test_data.csv). We removed just over 100 records from the test set, because we don't have permissions to publish them.
+
+A spreadsheet with more details about the results can be downloaded here: [Parsing_comparison_1.1_vs_1.2.xlsx](https://github.com/Senzing/libpostal-data/blob/main/files/stats/v1.2.0/Parsing_comparison_1.1_vs_1.2.xlsx).
+
+### Training data
+
+The data we used for creating the data model is available for download. To download click the links below:
+
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/formatted_addresses_tagged.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/formatted_places_tagged.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/formatted_ways_tagged.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/geoplanet_formatted_addresses_tagged.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/openaddresses_formatted_addresses_tagged.tsv.tgz
+- https://public-read-libpostal-data.s3.amazonaws.com/v1.2.0/training_data/senzing_formatted_random.tsv.tgz
+
+Once downloaded, extract them with
+
+```
+tar -zxvf <file name>
+```
+
 ## Version 1.1.0
 
 This version is composed of 3 files
@@ -18,7 +80,7 @@ This version is composed of 3 files
 - libpostal_data.tar.gz - This file is also the same as used by default libpostal datamodel.
 - parser.tar.gz - This is the new updated parser model.
 
-To download click on the links below and the browser with download them for you:
+To download click on the links below and the browser will download them for you:
 
 - https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/language_classifier.tar.gz
 - https://public-read-libpostal-data.s3.amazonaws.com/v1.1.0/libpostal_data.tar.gz
