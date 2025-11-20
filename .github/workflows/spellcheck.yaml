@@ -10,13 +10,4 @@ jobs:
   spellcheck:
     permissions:
       contents: read
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          persist-credentials: false
-
-      - uses: streetsidesoftware/cspell-action@v8
-        with:
-          config: .vscode/cspell.json
+    uses: senzing-factory/build-resources/.github/workflows/cspell.yaml@v3
