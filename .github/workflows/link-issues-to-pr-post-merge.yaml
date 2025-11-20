@@ -1,0 +1,16 @@
+name: Link Issues to PR Post Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions: {}
+
+jobs:
+  link-issues:
+    # Only run if PR was actually merged (not just closed)
+    if: github.event.pull_request.merged == true
+    permissions:
+      pull-requests: write
+      contents: read
+    uses: senzing-factory/build-resources/.github/workflows/link-issues-to-pull-request-post-merge.yaml@v3
