@@ -12,7 +12,7 @@ jobs:
     permissions:
       repository-projects: write
     secrets:
-      SENZING_GITHUB_PROJECT_RW_TOKEN: ${{ secrets.SENZING_GITHUB_PROJECT_RW_TOKEN }}
+      PROJECT_RW_TOKEN: ${{ secrets.SENZING_GITHUB_PROJECT_RW_TOKEN }}
     uses: senzing-factory/build-resources/.github/workflows/move-pr-to-done-dependabot.yaml@v4
     with:
       project: ${{ vars.SENZING_GITHUB_ORGANIZATION_PROJECT }}
