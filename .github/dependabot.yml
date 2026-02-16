@@ -5,7 +5,7 @@ updates:
       - "kernelsam"
     cooldown:
       default-days: 21
-      exclude-patterns:
+      exclude:
         - "senzing-factory/*"
     directory: "/"
     groups:
